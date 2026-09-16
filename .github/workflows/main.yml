@@ -12,7 +12,6 @@ on:
     branches:
       - main
 
- 
 permissions:
   contents: read
 
@@ -35,19 +34,13 @@ jobs:
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
-
-          if [ -f requirements.txt ]; then
-            pip install -r requirements.txt
-          fi
-
-          pip install flake8 pytest
+          pip install -r requirements.txt
 
       # Install Playwright Chromium
       - name: Install Playwright Chromium
         run: |
           playwright install chromium
 
-      
       # Run daily verse automation
       - name: Run Verse Automation
         env:
