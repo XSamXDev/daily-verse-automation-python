@@ -2,7 +2,8 @@ name: Daily Verse Automation
 
 on:
   schedule:
-    - cron: '30 20 * * *'
+    - cron: '30 3 * * *' # Runs at 8:30 AM every day
+      timezone: 'Asia/Kolkata'
   workflow_dispatch:
 
 permissions:
