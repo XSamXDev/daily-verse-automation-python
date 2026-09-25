@@ -20,7 +20,7 @@ def send_email(body):
         server.login(SENDER_EMAIL, SENDER_PASSWORD)
 
         msg = MIMEText(body, "html", "utf-8")
-        msg["Subject"] = "📖 Verse Of The Day 📖"
+        msg["Subject"] = "📖 Daily Reminder 📖"
         msg["From"] = SENDER_EMAIL
         msg["To"] = "connectsameer.in@gmail.com"
 
